@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
@@ -85,8 +86,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun message(id:Int){
         Snackbar.make(binding.cl, getString(id),Snackbar.LENGTH_SHORT)
-            .setTextColor(Color.parseColor("#FFFFFF"))
-            .setBackgroundTint(Color.parseColor("#9E1734"))
+            .setTextColor(ContextCompat.getColor(this, R.color.white))
+            .setBackgroundTint(ContextCompat.getColor(this, R.color.colorPrimary))
             .show()
     }
 }

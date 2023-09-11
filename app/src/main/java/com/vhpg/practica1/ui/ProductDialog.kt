@@ -12,6 +12,8 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.Toast
+import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.getColor
 import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.lifecycleScope
 
@@ -337,8 +339,8 @@ class ProductDialog(
     }
     private fun messageDialog(text: String){
         Snackbar.make(binding.dial, text, Snackbar.LENGTH_SHORT)
-            .setTextColor(Color.parseColor("#FFFFFF"))
-            .setBackgroundTint(Color.parseColor("#9E1734"))
+            .setTextColor(ContextCompat.getColor(requireContext(), R.color.white))
+            .setBackgroundTint(ContextCompat.getColor(requireContext(), R.color.colorPrimary))
             .show()
     }
     private fun buildDialog(
